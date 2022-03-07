@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\DBD_Compulsory.csproj": {}
+    "C:\\Work\\dbd-compulsory\\DBD_Compulsory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\DBD_Compulsory.csproj": {
+    "C:\\Work\\dbd-compulsory\\DBD_Compulsory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\DBD_Compulsory.csproj",
+        "projectUniqueName": "C:\\Work\\dbd-compulsory\\DBD_Compulsory.csproj",
         "projectName": "DBD_Compulsory",
-        "projectPath": "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\DBD_Compulsory.csproj",
-        "packagesPath": "C:\\Users\\Rizvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\obj\\",
+        "projectPath": "C:\\Work\\dbd-compulsory\\DBD_Compulsory.csproj",
+        "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\dbd-compulsory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rizvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -49,12 +55,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
