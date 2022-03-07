@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pcTwpYGOeXaF1oH1TDz1+JDwyvDN0NkR4WJsUynzYsr3M7ZepH665tDKABoPQYr11g4WbeBT3Qq6CGeDLXPX6g==",
+  "dgSpecHash": "duIMGzG0ns1yDcH4vcpuo8/UU+5eRlY9dJAQ1O1MRGMkir8UJVij14xMUxCd/JdC3zkX2NuxxOyjjAz8XJ2srA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rizvan\\Desktop\\DBD_Compulsory\\DBD_Compulsory.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Skole\\Software Developer\\Databases for Developers\\dbd-compulsory\\DBD_Compulsory.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renej\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
