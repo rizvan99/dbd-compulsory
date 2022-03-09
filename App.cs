@@ -70,8 +70,17 @@ namespace DBD_Compulsory
             var name = Console.ReadLine();
             Console.WriteLine("Enter MgrSSN");
             var ssn = Console.ReadLine();
-            Console.WriteLine("Department " + name + " has been created");
-            new Db().USP_CreateDepartment(name, ssn);
+            var result = new Db().USP_CreateDepartment(name, ssn);
+            Console.WriteLine("\nDepartment DNumber: " + result + "\n");
+        }
+
+        private void UpdateDepartmentName()
+        {
+            Console.WriteLine("Enter DNumber");
+            var DNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter DName");
+            var DName = Console.ReadLine();
+            new Db().USP_UpdateDepartmentName(DNumber, DName);
         }
     }
 }
