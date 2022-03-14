@@ -103,7 +103,7 @@ namespace DBD_Compulsory
         {
             connection = new SqlConnection(connectionString);
 
-            string sql = $"EXECUTE usp_GetDepartment {DNumber};";
+            string sql = $"EXECUTE usp_GetDepartmentV2 {DNumber};";
 
             try
             {
@@ -133,7 +133,7 @@ namespace DBD_Compulsory
         {
             connection = new SqlConnection(connectionString);
 
-            string sql = $"EXECUTE usp_GetAllDepartments;";
+            string sql = $"EXECUTE usp_GetAllDepartmentsV2;";
 
             try
             {
