@@ -15,7 +15,7 @@ namespace DBD_Compulsory
 
         public Db()
         {
-            connectionString = $"Server=localhost;Database=Company;User Id=sa;Password=Warstroy21!;";
+            connectionString = $"Server=localhost;Database=Company;Integrated Security=SSPI;";
         }
 
         public object USP_CreateDepartment(string Dname, string MgrSSN)
