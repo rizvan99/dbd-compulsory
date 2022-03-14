@@ -82,5 +82,35 @@ namespace DBD_Compulsory
             var DName = Console.ReadLine();
             new Db().USP_UpdateDepartmentName(DNumber, DName);
         }
+
+        private void UpdateDepartmentManager()
+        {
+            Console.WriteLine("Enter DNumber");
+            var DNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter MgrSNN");
+            var MgrSNN = Console.ReadLine();
+            new Db().USP_UpdateDepartmentManager(DNumber, MgrSNN);
+        }
+
+        private void DeleteDepartment()
+        {
+            Console.WriteLine("Enter DNumber");
+            var DNumber = int.Parse(Console.ReadLine());
+            new Db().usp_DeleteDepartment(DNumber);
+        }
+
+        private void GetDepartment()
+        {
+            Console.WriteLine("Enter DNumber");
+            var DNumber = int.Parse(Console.ReadLine());
+            var result = new Db().usp_GetDepartment(DNumber);
+            Console.WriteLine(result);
+        }
+
+        private void GetAllDepartments()
+        {
+            var result = new Db().usp_GetAllDepartments();
+            Console.WriteLine(result);
+        }
     }
 }
