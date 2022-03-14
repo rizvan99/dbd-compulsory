@@ -318,8 +318,12 @@ BEGIN
 	IF @DNumber IS NOT NULL AND @MgrSSN IS NOT NULL
 		BEGIN
 			UPDATE Department
-			SET MgrSSN = @MgrSSN
+			SET MgrSSN = @MgrSSN, MgrStartDate = GETDATE()
 			WHERE DNumber = @DNumber
+
+			UPDATE Employee
+			Set SuperSSN = @MgrSSN
+			WHERE Dno = @DNumber AND Employee.SSN != @MgrSSN
 		END
 END
 GO

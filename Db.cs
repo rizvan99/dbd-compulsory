@@ -117,8 +117,8 @@ namespace DBD_Compulsory
                     {
                         while (reader.Read())
                         {
-                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}",
-                                reader[0], reader[1], reader[2], reader[3]));
+                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}",
+                                reader[0], reader[1], reader[2], reader[3], reader[4]));
                         }
                     }
                 }
