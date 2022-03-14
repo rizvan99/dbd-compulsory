@@ -99,7 +99,7 @@ namespace DBD_Compulsory
             }
         }
 
-        public object usp_GetDepartment(int DNumber)
+        public void usp_GetDepartment(int DNumber)
         {
             connection = new SqlConnection(connectionString);
 
@@ -107,12 +107,21 @@ namespace DBD_Compulsory
 
             try
             {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                object department = command.ExecuteScalar();
-                command.Dispose();
-                connection.Close();
-                return department;
+                using (SqlConnection connection = new SqlConnection(
+                           connectionString))
+                {
+                    SqlCommand command = new SqlCommand(
+                        sql, connection);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}",
+                                reader[0], reader[1], reader[2], reader[3]));
+                        }
+                    }
+                }
             }
             catch (SqlException ex)
             {
@@ -120,7 +129,7 @@ namespace DBD_Compulsory
             }
         }
 
-        public object usp_GetAllDepartments()
+        public void usp_GetAllDepartments()
         {
             connection = new SqlConnection(connectionString);
 
@@ -128,12 +137,21 @@ namespace DBD_Compulsory
 
             try
             {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                object department = command.ExecuteScalar();
-                command.Dispose();
-                connection.Close();
-                return department;
+                using (SqlConnection connection = new SqlConnection(
+                           connectionString))
+                {
+                    SqlCommand command = new SqlCommand(
+                        sql, connection);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(String.Format("{0}, {1}, {2}",
+                                reader[0], reader[1], reader[2]));
+                        }
+                    }
+                }
             }
             catch (SqlException ex)
             {

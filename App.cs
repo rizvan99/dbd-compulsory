@@ -119,14 +119,12 @@ namespace DBD_Compulsory
         {
             Console.WriteLine("Enter DNumber");
             var DNumber = int.Parse(Console.ReadLine());
-            var result = new Db().usp_GetDepartment(DNumber);
-            Console.WriteLine(result);
+            new Db().usp_GetDepartment(DNumber);
         }
 
         private void GetAllDepartments()
         {
-            var result = new Db().usp_GetAllDepartments();
-            Console.WriteLine(result);
+            new Db().usp_GetAllDepartments();
         }
     }
 }
