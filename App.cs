@@ -35,6 +35,22 @@ namespace DBD_Compulsory
                     case 1:
                         CreateDepartment();
                         break;
+                    case 2:
+                        UpdateDepartmentName();
+                        break;
+                    case 3:
+                        UpdateDepartmentManager();
+
+                        break;
+                    case 4:
+                        DeleteDepartment();
+                        break;
+                    case 5:
+                        GetDepartment();
+                        break;
+                    case 6:
+                        GetAllDepartments();
+                        break;
                     default:
                         Console.WriteLine("Closing the program");
                         break;
