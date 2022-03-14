@@ -200,12 +200,10 @@ INSERT [dbo].[Works_on] ([Essn], [Pno], [Hours]) VALUES (CAST(999887777 AS Numer
 
 ALTER TABLE [dbo].[Department] ADD  CONSTRAINT [FK_Department_Employee] FOREIGN KEY([MgrSSN])
 REFERENCES [dbo].[Employee] ([SSN])
-ON DELETE CASCADE
 GO
 
 ALTER TABLE [dbo].[Dependent] ADD  CONSTRAINT [FK_Dependent_Employee] FOREIGN KEY([Essn])
 REFERENCES [dbo].[Employee] ([SSN])
-ON DELETE CASCADE
 GO
 
 ALTER TABLE [dbo].[Dept_Locations] ADD  CONSTRAINT [FK_Dept_Locations_Department] FOREIGN KEY([DNUmber])
@@ -220,7 +218,6 @@ GO
 
 ALTER TABLE [dbo].[Employee]  ADD  CONSTRAINT [FK_Employee_Employee] FOREIGN KEY([SuperSSN])
 REFERENCES [dbo].[Employee] ([SSN])
-ON DELETE SET NULL
 GO
 
 ALTER TABLE [dbo].[Project]  ADD  CONSTRAINT [FK_Project_Department] FOREIGN KEY([DNum])
